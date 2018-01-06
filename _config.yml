@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 得闲饮茶
+title: 键盘侠
 subtitle:
 description: 换个花样提升自己对生活的热爱
 author: Chris Xu
@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://chrisxjh.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -77,7 +77,11 @@ theme: hexo-theme-next-5.1.4
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/ChrisXJH/chrisxjh.github.io.git
+  branch: master
+  message: deploy
+
 
 disqus_proxy:
   shortname: chrisxu

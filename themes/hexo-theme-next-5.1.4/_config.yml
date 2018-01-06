@@ -769,10 +769,10 @@ vendors:
   # Internal version: 1.0.2
   # See: https://github.com/HubSpot/pace
   # Or use direct links below:
-  # pace: //cdn.bootcss.com/pace/1.0.2/pace.min.js
-  # pace_css: //cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css
   pace:
   pace_css:
+  # pace:
+  # pace_css:
 
   # Internal version: 1.0.0
   # https://github.com/hustcc/canvas-nest.js
@@ -783,7 +783,7 @@ vendors:
 
   # three_waves
   # https://github.com/jjandxa/three_waves
-  three_waves:
+  # three_waves:
 
   # three_waves
   # https://github.com/jjandxa/canvas_lines
