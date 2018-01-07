@@ -3,18 +3,20 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 键盘侠
+title: Chris Xu
 subtitle:
-description: 换个花样提升自己对生活的热爱
+description: 待我代码编成，娶你为妻可好
 author: Chris Xu
-language: zh-Hans
+language:
+    - zh
+    - en
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://chrisxjh.github.io
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :lang/'':year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
@@ -28,7 +30,8 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :title.md
+# new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
@@ -73,6 +76,16 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-next-5.1.4
+
+## Plugins: http://hexo.io/plugins/
+#RSS订阅
+plugin:
+- hexo-generator-feed
+#Feed Atom
+feed:
+type: atom
+path: atom.xml
+limit: 20
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
