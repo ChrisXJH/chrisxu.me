@@ -1,5 +1,5 @@
 ---
-title: DIY Raspberry Pi 倒车雷达（一）程序设计
+title: DIY Raspberry Pi 倒车雷达（一）：程序设计
 date: 2018-01-06 15:31:01
 tags: [raspberry pi, 树莓派, C++, 面向对象, 设计模式]
 categories: [DIY]
@@ -9,8 +9,6 @@ categories: [DIY]
 最近气温每天零下十几度，在家闲得无聊，突发奇想用Raspberry PI做了一个简易的倒车雷达。至于有没有实际用途，再说嘛，或许过几年就有钱买车了呢...
 
 选择用Raspberry PI做的原因是... 嗯，家里正好有一个闲置的树莓派3。并且raspbian上可以直接用gcc编译c++程序。
-
-第一部分内容主要针对程序设计。涉及wiringPi的使用和设计模式。
 
 
 Github：<a href="https://github.com/ChrisXJH/parking_sensor">https://github.com/ChrisXJH/parking_sensor</a>
