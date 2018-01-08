@@ -131,7 +131,7 @@ social:
   Linkedin: https://www.linkedin.com/in/jianhao-xu-725897132/ || linkedin
   #E-Mail: mailto:yourname@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
-  #Twitter: https://twitter.com/yourname || twitter
+  Twitter: https://twitter.com/chris_xjh || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
   #VK Group: https://vk.com/yourname || vk
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
@@ -251,7 +251,7 @@ wechatpay: /images/wechatpay.jpg
 
 # Declare license on posts
 post_copyright:
-  enable: true
+  enable: false
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
@@ -807,6 +807,8 @@ vendors:
   # https://github.com/revir/need-more-share2
   needMoreShare2:
 
+  particles: /js/src/particles.js
+  particles-app: /js/src/particles-app.js
 
 # Assets
 css: css
