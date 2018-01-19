@@ -1,5 +1,5 @@
 ---
-title: DIY Raspberry Pi 倒车雷达（一）：程序设计
+title: DIY Raspberry Pi 倒车雷达程序设计
 date: 2018-01-06 15:31:01
 tags: [raspberry pi, 树莓派, C++, 面向对象, 设计模式]
 categories: [diy]
