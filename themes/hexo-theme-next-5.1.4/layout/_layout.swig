@@ -10,11 +10,9 @@
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
   {% include '_third-party/analytics/index.swig' %}
-  <link rel="stylesheet" href="/css/particles-style.css">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}">
-<div id="particles-js"></div>
 
   {% set container_class = "container " %}
   {% if theme.sidebar.position %}
@@ -90,7 +88,5 @@
   {% include '_third-party/mathjax.swig' %}
   {% include '_third-party/scroll-cookie.swig' %}
   {% include '_third-party/exturl.swig' %}
-  <script type="text/javascript" src="/js/src/particles.js"></script>
-  <script type="text/javascript" src="/js/src/particles-app.js"></script>
 </body>
 </html>
