@@ -104,6 +104,16 @@ function analyzeContacts(contacts) {
     result.ratio = result.numOfMales != 0 ? (result.numOfFemales / result.numOfMales) : 0;
     return result;
 }
+
+/**
+ * 联系人更新事件
+ */
+bot.on('contacts-updated', (contacts) => {
+    if (numOfContacts < contacts.length) {
+        numOfContacts = contacts.length;
+        console.log(analyzeContacts(contacts));
+    }
+});
 {% endcodeblock %}
  
  ## 运行测试
@@ -114,3 +124,65 @@ function analyzeContacts(contacts) {
  {% asset_img logs.png %}
 
  其实还有很多种玩法的，请自行发挥。
+
+## 完整代码
+
+{% codeblock lang:javascript %}
+const Wechat = require('wechat4u');
+const qrcode = require('qrcode-terminal');
+let bot = new Wechat();
+let numOfContacts = 0;
+bot.start();
+
+bot.on('uuid', uuid => {
+    qrcode.generate('https://login.weixin.qq.com/l/' + uuid, {
+        small: true
+    });
+    console.log('二维码地址: ', 'https://login.weixin.qq.com/qrcode/' + uuid);
+});
+
+bot.on('login', () => {
+    console.log('微信登录成功！');
+});
+
+/**
+ * 分析联系人性别
+ * 
+ * @param contacts 
+ */
+function analyzeContacts(contacts) {
+    let result = {
+       numOfMales: 0,
+       numOfFemales:0,
+       unknowns: 0 
+    };
+
+    contacts.forEach(con => {
+        if (con['Sex'] == 1) {
+            // 男
+            result.numOfMales++;
+        }
+        else if (con['Sex'] == 2) {
+            // 女
+            result.numOfFemales++;
+        }
+        else {
+            // 未知
+            result.unknowns++;
+        }
+    });
+    // 计算男女比例
+    result.ratio = result.numOfMales != 0 ? (result.numOfFemales / result.numOfMales) : 0;
+    return result;
+}
+
+/**
+ * 联系人更新事件
+ */
+bot.on('contacts-updated', (contacts) => {
+    if (numOfContacts < contacts.length) {
+        numOfContacts = contacts.length;
+        console.log(analyzeContacts(contacts));
+    }
+});
+{% endcodeblock %}
