@@ -4,3 +4,4 @@ Thumbs.db
 .deploy*/
 public/
 CNAME
+node_modules/
